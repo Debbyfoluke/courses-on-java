@@ -1,0 +1,31 @@
+package java_course_part3.collections;
+
+import org.jetbrains.annotations.NotNull;
+
+public class Customer implements Comparable<Customer> {
+    private String name;
+    public static String email;
+
+    public static String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Customer(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    @Override
+    public int compareTo(@NotNull Customer other) {
+        return name.compareTo(other.name);
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+}
